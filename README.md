@@ -22,7 +22,7 @@ Datum: 26.06.2015
 Kommentar:
 - initiale Version
 
-###Version 01
+###Version 02
 Datum: 26.06.2015
 Kommentar:
-- Feld kunde.geburtsDatum neu
+- neu: kunde.geburtsDatum
