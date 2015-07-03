@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           attributeFormDefault="qualified"
+           elementFormDefault="unqualified"
+           xmlns="http://boxl.hypoport.de/baufilead/v02/anfrage"
+           targetNamespace="http://boxl.hypoport.de/baufilead/v02/anfrage">
+  <xs:element name="Anfrage" type="Anfrage"/>
+  <xs:complexType name="Anfrage">
+    <xs:sequence>
+      <xs:element name="anmerkungen" type="xs:string" minOccurs="0"/>
+      <xs:element name="erfassungsWegZusatz" type="xs:string"/>
+      <xs:element name="finanzierungsWunsch" type="FinanzierungsWunsch"/>
+      <xs:element name="immobilie" type="Immobilie"/>
+      <xs:element name="kunde" type="Kunde" maxOccurs="2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Immobilie">
+    <xs:sequence>
+      <xs:element name="adresse" type="Adresse"/>
+      <xs:element name="bauJahr" type="xs:int" minOccurs="0"/>
+      <xs:element name="grundStuecksFlaeche" type="QuadratMeter" minOccurs="0"/>
+      <xs:element name="kosten" type="Euro"/>
+      <xs:element name="nutzung" type="ImmobilienNutzung" minOccurs="0"/>
+      <xs:element name="objektArt" type="ObjektArt"/>
+      <xs:element name="wohnFlaeche" type="QuadratMeter" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Kunde">
+    <xs:sequence>
+      <xs:element name="adresse" type="Adresse"/>
+      <xs:element name="anrede" type="Anrede"/>
+      <xs:element name="anstellungsVerhaeltnis" type="AnstellungsVerhaeltnis" minOccurs="0"/>
+      <xs:element name="anzahlKinder" type="xs:int" minOccurs="0"/>
+      <xs:element name="ausgabenMonatlichOhneMiete" type="Euro" minOccurs="0"/>
+      <xs:element name="eigenKapital" type="Euro" minOccurs="0"/>
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="geburtsDatum" type="xs:date" minOccurs="0"/>
+      <xs:element name="nachname" type="xs:string"/>
+      <xs:element name="nettoEinkommenMonatlich" type="Euro" minOccurs="0"/>
+      <xs:element name="telefonMobil" type="TelefonNummer" minOccurs="0"/>
+      <xs:element name="telefonPrivat" type="TelefonNummer" minOccurs="0"/>
+      <xs:element name="vorname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Adresse">
+    <xs:sequence>
+      <xs:element name="hausnummer" type="xs:string" minOccurs="0"/>
+      <xs:element name="ort" type="xs:string" minOccurs="0"/>
+      <xs:element name="postleitzahl" type="xs:string" minOccurs="0"/>
+      <xs:element name="strasse" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Anrede">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HERR"/>
+      <xs:enumeration value="FRAU"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AnstellungsVerhaeltnis">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ANGESTELLT"/>
+      <xs:enumeration value="SELBSTSTAENDIG"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="FinanzierungsWunsch">
+    <xs:sequence>
+      <xs:element name="finanzierungsZweck" type="FinanzierungsZweck"/>
+      <xs:element name="darlehensSumme" type="Euro"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ImmobilienNutzung">
+    <xs:sequence>
+      <xs:element name="fremd" type="xs:boolean"/>
+      <xs:element name="selbst" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FinanzierungsZweck">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="KAUF"/>
+      <xs:enumeration value="NEUBAU"/>
+      <xs:enumeration value="MODERNISIERUNG"/>
+      <xs:enumeration value="UMSCHULDUNG"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ObjektArt">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EIN_ODER_ZWEI_FAMILIEN_HAUS"/>
+      <xs:enumeration value="GRUNDSTUECK"/>
+      <xs:enumeration value="MEHR_FAMILIEN_HAUS"/>
+      <xs:enumeration value="WOHNUNG"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TelefonNummer">
+    <xs:sequence>
+      <xs:element name="nummer" type="xs:string"/>
+      <xs:element name="vorwahl" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Euro">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:simpleType name="QuadratMeter">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+</xs:schema>

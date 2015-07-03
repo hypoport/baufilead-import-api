@@ -1,0 +1,69 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v02="http://boxl.hypoport.de/baufilead/v02/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <v02:requestParameters>
+      <anmerkungen>Mitteilung: Hat keine Eile.
+        Erreichbarkeit: ab 18 Uhr, 9 - 12 Uhr
+        Einstiegsformular: Konditionsrechner
+        Tilgung: 2,00% p.a.
+
+        Diese Konditionen hat der Kunde gesehen
+        Gewünscht | Zinsbindung | Sollzins | Effektivzins | Rate | Restschuld | Produzent | Produktart
+        nein | 5 | 1,30% | 1,31% | 275€ | 89.674€ | ING-DiBa | Annuitätendarlehen
+        ja | 10 | 1,60% | 1,61% | 300€ | 78.327€ | ING-DiBa | Annuitätendarlehen
+        ja | 15 | 2,10% | 2,12% | 342€ | 64.772€ | ING-DiBa | Annuitätendarlehen
+        ja | 20 | 3,16% | 3,21% | 430€ | 44.316€ | DKB | Annuitätendarlehen
+        nein | 25 | 4,31% | 4,40% | 526€ | 10.365€ | Deutsche Bank Individuell | Annuitätendarlehen
+        nein | 30 | 4,60% | 4,70% | 550€ | 0€ | Deutsche Bank Individuell | Annuitätendarlehen
+      </anmerkungen>
+      <erfassungsWegZusatz>BHW</erfassungsWegZusatz>
+      <finanzierungsWunsch>
+        <finanzierungsZweck>KAUF</finanzierungsZweck>
+        <darlehensSumme>100000</darlehensSumme>
+      </finanzierungsWunsch>
+      <immobilie>
+        <adresse>
+          <hausnummer>110</hausnummer>
+          <ort>Berlin</ort>
+          <postleitzahl>13055</postleitzahl>
+          <strasse>Konrad-Wolf-Str.</strasse>
+        </adresse>
+        <bauJahr>1963</bauJahr>
+        <grundStuecksFlaeche>200</grundStuecksFlaeche>
+        <kosten>120000</kosten>
+        <nutzung>
+          <fremd>false</fremd>
+          <selbst>true</selbst>
+        </nutzung>
+        <objektArt>WOHNUNG</objektArt>
+        <wohnFlaeche>60</wohnFlaeche>
+      </immobilie>
+      <kunde>
+        <adresse>
+          <hausnummer>71</hausnummer>
+          <ort>Berlin</ort>
+          <postleitzahl>10179</postleitzahl>
+          <strasse>Klosterstr.</strasse>
+        </adresse>
+        <anrede>HERR</anrede>
+        <anstellungsVerhaeltnis>ANGESTELLT</anstellungsVerhaeltnis>
+        <anzahlKinder>2</anzahlKinder>
+        <ausgabenMonatlichOhneMiete>500</ausgabenMonatlichOhneMiete>
+        <eigenKapital>20000</eigenKapital>
+        <email>test@hypoport.de</email>
+        <geburtsDatum>1972-03-01</geburtsDatum>
+        <nachname>Müller</nachname>
+        <nettoEinkommenMonatlich>3500</nettoEinkommenMonatlich>
+        <telefonMobil>
+          <nummer>123456789</nummer>
+          <vorwahl>0171</vorwahl>
+        </telefonMobil>
+        <telefonPrivat>
+          <nummer>123456789</nummer>
+          <vorwahl>030</vorwahl>
+        </telefonPrivat>
+        <vorname>Heinz</vorname>
+      </kunde>
+    </v02:requestParameters>
+  </soapenv:Body>
+</soapenv:Envelope>
