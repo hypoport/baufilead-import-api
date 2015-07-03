@@ -14,6 +14,8 @@ Die Schnittstelle ist über HTTPS ansprechbar.
 Weitere Sicherheitsdetails sind Bestandteil des jeweiligen Anbindungsprojekts.
 
 ## Versionen der Schnittstelle
+Die WSDL-Dateien und XSD-Dateien (Anfrage und Anwort) finden sich für jede Version der Schnittstelle in einem eigenen Ordner.
+Weiterhin enthält der Ordner jeweils einen gültigen SOAP-Beispiel-Request.
 
 ###Version 01
 Datum: 26.06.2015
