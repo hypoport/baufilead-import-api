@@ -10,7 +10,7 @@ https://dunkelboxl.hypoport.de/boxl-hv/service/baufiLeadImport/v01
 https://dunkelboxl.hypoport.de/boxl-hv/service/baufiLeadImport/v02
 ```
 ## Security
-Die Schnittstelle ist über HTTPS ansprechbar.
+Die Schnittstelle ist über HTTPS ansprechbar. Zum Zugriff ist gültiges Zertifikat nötig.
 Weitere Sicherheitsdetails sind Bestandteil des jeweiligen Anbindungsprojekts.
 
 ## Versionen der Schnittstelle
