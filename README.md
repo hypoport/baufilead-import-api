@@ -1,13 +1,13 @@
-# BaufiLead-Import API
+# BoxlLead-Import API
 
-BaufiLead-Import ist ein Service zum Import von Leads in BOXL für BHW Partner.
+BoxlLead-Import ist ein Service zum Import von Leads in BOXL für BHW Partner.
 Es werden verschiedene Versionen der Schnittstelle unterstützt.
 
 ## HTTP-SOAP Service
-Der Service ist unter folgendem Pfad aufrufbar für die jeweiligs genutzte Version der Schnittstellen.
+Der Service ist unter folgendem Pfad für die jeweils genutzte Version der Schnittstelle erreichbar.
 ```
-https://dunkelboxl.hypoport.de/boxl-hv/service/baufiLeadImport/v01
-https://dunkelboxl.hypoport.de/boxl-hv/service/baufiLeadImport/v02
+https://dunkelboxl.hypoport.de/boxl-hv/service/leadImport/v01
+https://dunkelboxl.hypoport.de/boxl-hv/service/leadImport/v02
 ```
 ## Security
 Die Schnittstelle ist über HTTPS ansprechbar. Zum Zugriff ist gültiges Zertifikat nötig.
