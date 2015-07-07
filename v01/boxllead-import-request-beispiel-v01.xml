@@ -1,4 +1,4 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v01="http://boxl.hypoport.de/baufilead/v01/">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v01="http://boxl.hypoport.de/boxllead/v01/">
   <soapenv:Header/>
   <soapenv:Body>
     <v01:requestParameters>
