@@ -2,28 +2,28 @@
 <wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
                   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-                  xmlns:tns="http://boxl.hypoport.de/baufilead/v02/"
-                  xmlns="http://boxl.hypoport.de/baufilead/v02/"
-                  targetNamespace="http://boxl.hypoport.de/baufilead/v02/">
+                  xmlns:tns="http://boxl.hypoport.de/boxllead/v02/"
+                  xmlns="http://boxl.hypoport.de/boxllead/v02/"
+                  targetNamespace="http://boxl.hypoport.de/boxllead/v02/">
 
   <wsdl:types>
     <xsd:schema
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        xmlns:anfrage="http://boxl.hypoport.de/baufilead/v02/anfrage"
-        xmlns:antwort="http://boxl.hypoport.de/baufilead/v02/antwort"
-        xmlns:tns="http://boxl.hypoport.de/baufilead/v02/"
+        xmlns:anfrage="http://boxl.hypoport.de/boxllead/v02/anfrage"
+        xmlns:antwort="http://boxl.hypoport.de/boxllead/v02/antwort"
+        xmlns:tns="http://boxl.hypoport.de/boxllead/v02/"
         attributeFormDefault="qualified"
         elementFormDefault="unqualified"
-        targetNamespace="http://boxl.hypoport.de/baufilead/v02/">
+        targetNamespace="http://boxl.hypoport.de/boxllead/v02/">
 
       <xsd:annotation>
-        <xsd:appinfo>BaufiLead Import Schema</xsd:appinfo>
+        <xsd:appinfo>BoxlLead Import Schema</xsd:appinfo>
         <xsd:appinfo>Version: 02</xsd:appinfo>
         <xsd:appinfo>Datum: 26.06.2015</xsd:appinfo>
       </xsd:annotation>
 
-      <xsd:import namespace="http://boxl.hypoport.de/baufilead/v02/anfrage" schemaLocation="baufilead-import-anfrage-v02.xsd"/>
-      <xsd:import namespace="http://boxl.hypoport.de/baufilead/v02/antwort" schemaLocation="baufilead-import-antwort-v02.xsd"/>
+      <xsd:import namespace="http://boxl.hypoport.de/boxllead/v02/anfrage" schemaLocation="boxllead-import-anfrage-v02.xsd"/>
+      <xsd:import namespace="http://boxl.hypoport.de/boxllead/v02/antwort" schemaLocation="boxllead-import-antwort-v02.xsd"/>
 
       <xsd:element name="requestParameters" type="anfrage:Anfrage"/>
       <xsd:element name="responseParameters" type="antwort:Antwort"/>
@@ -39,14 +39,14 @@
   </wsdl:message>
 
   <!-- service -->
-  <wsdl:service name="BaufiLeadWebServiceService_v02">
-    <wsdl:port binding="tns:BaufiLeadWebServiceSoapBinding" name="BaufiLeadWebServicePort">
-      <soap:address location="https://dunkelboxl.hypoport.de/boxl-hv/service/baufiLeadImport/v02"/>
+  <wsdl:service name="BoxlLeadWebService_v02">
+    <wsdl:port binding="tns:BoxlLeadWebServiceSoapBinding" name="BoxlLeadWebServicePort">
+      <soap:address location="https://dunkelboxl.hypoport.de/boxl-hv/service/leadImport/v02"/>
     </wsdl:port>
   </wsdl:service>
 
   <!-- binding -->
-  <wsdl:binding name="BaufiLeadWebServiceSoapBinding" type="tns:BaufiLeadWebServiceV02">
+  <wsdl:binding name="BoxlLeadWebServiceSoapBinding" type="tns:BoxlLeadWebServiceV02">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="importiereLead">
       <soap:operation soapAction="" style="document"/>
@@ -60,7 +60,7 @@
   </wsdl:binding>
 
   <!-- operations -->
-  <wsdl:portType name="BaufiLeadWebServiceV02">
+  <wsdl:portType name="BoxlLeadWebServiceV02">
     <wsdl:operation name="importiereLead">
       <wsdl:input message="tns:importiereLeadMessage" name="importiereLead"/>
       <wsdl:output message="tns:importiereLeadResponseMessage" name="importiereLeadResponse"/>

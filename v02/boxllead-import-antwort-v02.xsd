@@ -2,8 +2,8 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            attributeFormDefault="unqualified"
            elementFormDefault="unqualified"
-           xmlns="http://boxl.hypoport.de/baufilead/v02/antwort"
-           targetNamespace="http://boxl.hypoport.de/baufilead/v02/antwort">
+           xmlns="http://boxl.hypoport.de/boxllead/v02/antwort"
+           targetNamespace="http://boxl.hypoport.de/boxllead/v02/antwort">
   <xs:element name="Antwort" type="Antwort"/>
   <xs:complexType name="Antwort">
     <xs:sequence>
