@@ -1,6 +1,6 @@
-# BoxlLead-Import API
+# Boxl Lead-Import API
 
-BoxlLead-Import ist ein Service zum Import von Leads in BOXL für BHW Partner.
+Boxl Lead-Import ist ein Service zum Import von Leads in BOXL für BHW Partner.
 Es werden verschiedene Versionen der Schnittstelle unterstützt.
 
 ## HTTP-SOAP Service

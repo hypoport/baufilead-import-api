@@ -17,7 +17,7 @@
         targetNamespace="http://boxl.hypoport.de/boxllead/v01/">
 
       <xsd:annotation>
-        <xsd:appinfo>BoxlLead Import Schema</xsd:appinfo>
+        <xsd:appinfo>Boxl Lead-Import Schema</xsd:appinfo>
         <xsd:appinfo>Version: 01</xsd:appinfo>
         <xsd:appinfo>Datum: 26.06.2015</xsd:appinfo>
       </xsd:annotation>
