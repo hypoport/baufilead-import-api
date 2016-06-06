@@ -8,6 +8,7 @@ Der Service ist unter folgendem Pfad für die jeweils genutzte Version der Schni
 ```
 https://dunkelboxl.hypoport.de/boxl-hv/service/leadImport/v01
 https://dunkelboxl.hypoport.de/boxl-hv/service/leadImport/v02
+https://dunkelboxl.hypoport.de/boxl-hv/service/leadImport/v03
 ```
 ## Security
 Die Schnittstelle ist über HTTPS ansprechbar. Zum Zugriff ist ein gültiges Zertifikat nötig.
@@ -26,3 +27,8 @@ Kommentar:
 Datum: 26.06.2015
 Kommentar:
 - neu: kunde.geburtsDatum
+
+###Version 03
+Datum: 02.06.2016
+Kommentar:
+- neu: importMitteilenAktiv (Schalter eLanders)

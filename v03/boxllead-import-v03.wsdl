@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:tns="http://boxl.hypoport.de/boxllead/v03/"
+                  xmlns="http://boxl.hypoport.de/boxllead/v03/"
+                  targetNamespace="http://boxl.hypoport.de/boxllead/v03/">
+
+  <wsdl:types>
+    <xsd:schema
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:anfrage="http://boxl.hypoport.de/boxllead/v03/anfrage"
+        xmlns:antwort="http://boxl.hypoport.de/boxllead/v03/antwort"
+        xmlns:tns="http://boxl.hypoport.de/boxllead/v03/"
+        attributeFormDefault="qualified"
+        elementFormDefault="unqualified"
+        targetNamespace="http://boxl.hypoport.de/boxllead/v03/">
+
+      <xsd:annotation>
+        <xsd:appinfo>Boxl Lead-Import Schema</xsd:appinfo>
+        <xsd:appinfo>Version: 03</xsd:appinfo>
+        <xsd:appinfo>Datum: 02.06.2016</xsd:appinfo>
+      </xsd:annotation>
+
+      <xsd:import namespace="http://boxl.hypoport.de/boxllead/v03/anfrage" schemaLocation="boxllead-import-anfrage-v03.xsd"/>
+      <xsd:import namespace="http://boxl.hypoport.de/boxllead/v03/antwort" schemaLocation="boxllead-import-antwort-v03.xsd"/>
+
+      <xsd:element name="requestParameters" type="anfrage:Anfrage"/>
+      <xsd:element name="responseParameters" type="antwort:Antwort"/>
+    </xsd:schema>
+  </wsdl:types>
+
+  <!-- messages -->
+  <wsdl:message name="importiereLeadMessage">
+    <wsdl:part element="tns:requestParameters" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importiereLeadResponseMessage">
+    <wsdl:part element="tns:responseParameters" name="parameters"/>
+  </wsdl:message>
+
+  <!-- service -->
+  <wsdl:service name="BoxlLeadWebService_v03">
+    <wsdl:port binding="tns:BoxlLeadWebServiceSoapBinding" name="BoxlLeadWebServicePort">
+      <soap:address location="https://dunkelboxl.hypoport.de/boxl-hv/service/leadImport/v03"/>
+    </wsdl:port>
+  </wsdl:service>
+
+  <!-- binding -->
+  <wsdl:binding name="BoxlLeadWebServiceSoapBinding" type="tns:BoxlLeadWebServiceV03">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="importiereLead">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importiereLead">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importiereLeadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <!-- operations -->
+  <wsdl:portType name="BoxlLeadWebServiceV03">
+    <wsdl:operation name="importiereLead">
+      <wsdl:input message="tns:importiereLeadMessage" name="importiereLead"/>
+      <wsdl:output message="tns:importiereLeadResponseMessage" name="importiereLeadResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+</wsdl:definitions>
