@@ -31,4 +31,4 @@ Kommentar:
 ###Version 03
 Datum: 02.06.2016
 Kommentar:
-- neu: importMitteilenAktiv (Schalter eLanders)
+- neu: importMitteilenAktiv (Lead-Import an BHW kommunizieren)
