@@ -16,19 +16,16 @@ Weitere Sicherheitsdetails sind Bestandteil des jeweiligen Anbindungsprojekts.
 
 ## Versionen der Schnittstelle
 Die WSDL-Dateien und XSD-Dateien (Anfrage und Anwort) finden sich für jede Version der Schnittstelle in einem eigenen Ordner.
-Weiterhin enthält der Ordner jeweils einen gültigen SOAP-Beispiel-Request.
-
-###Version 01
-Datum: 26.06.2015
-Kommentar:
-- initiale Version
-
-###Version 02
-Datum: 26.06.2015
-Kommentar:
-- neu: kunde.geburtsDatum
+Weiterhin enthält der Ordner jeweils einen gültigen Beispiel-Request (SOAP).
 
 ###Version 03
 Datum: 02.06.2016
-Kommentar:
-- neu: importMitteilenAktiv (Lead-Import an BHW kommunizieren)
+- neues Element: importMitteilenAktiv (Lead-Import an BHW kommunizieren), Element ist optional (default: true)
+
+###Version 02
+Datum: 26.06.2015
+- neues Element: kunde.geburtsDatum
+
+###Version 01
+Datum: 26.06.2015
+- initiale Version
